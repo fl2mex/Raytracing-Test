@@ -44,5 +44,8 @@
     <ClInclude Include="src\shared.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\material.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
