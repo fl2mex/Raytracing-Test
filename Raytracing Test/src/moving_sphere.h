@@ -1,6 +1,5 @@
 #ifndef MOVING_SPHERE_H
 #define MOVING_SPHERE_H
-
 #include "hittable.h"
 #include "aabb.h"
 
@@ -67,5 +66,4 @@ bool moving_sphere::bounding_box(double _time0, double _time1, aabb& output_box)
     output_box = surrounding_box(box0, box1);
     return true;
 }
-
 #endif

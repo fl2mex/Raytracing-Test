@@ -1,8 +1,6 @@
 #ifndef CONSTANT_MEDIUM_H
 #define CONSTANT_MEDIUM_H
-
 #include "shared.h"
-
 #include "hittable.h"
 #include "material.h"
 #include "texture.h"
@@ -35,7 +33,6 @@ public:
 };
 
 bool constant_medium::hit(const ray& r, double t_min, double t_max, hit_record& rec) const {
-    // Print occasional samples when debugging. To enable, set enableDebug true.
     const bool enableDebug = false;
     const bool debugging = enableDebug && random_double() < 0.00001;
 
@@ -74,11 +71,10 @@ bool constant_medium::hit(const ray& r, double t_min, double t_max, hit_record& 
             << "rec.p = " << rec.p << '\n';
     }
 
-    rec.normal = vec3(1, 0, 0);  // arbitrary
-    rec.front_face = true;     // also arbitrary
+    rec.normal = vec3(1, 0, 0);
+    rec.front_face = true;
     rec.mat_ptr = phase_function;
 
     return true;
 }
-
 #endif

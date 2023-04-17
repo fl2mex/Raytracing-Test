@@ -1,13 +1,11 @@
 #ifndef PERLIN_H
 #define PERLIN_H
-
 #include "shared.h"
 #include "vec3.h"
 
 class perlin {
 public:
     perlin() {
-
         ranvec = new vec3[point_count];
         for (int i = 0; i < point_count; ++i) {
             ranvec[i] = unit_vector(vec3::random(-1, 1));
@@ -107,5 +105,4 @@ private:
         return accum;
     }
 };
-
 #endif

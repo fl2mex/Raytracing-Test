@@ -1,6 +1,5 @@
 #ifndef AABB_H
 #define AABB_H
-
 #include "shared.h"
 #include "ray.h"
 
@@ -44,5 +43,4 @@ aabb surrounding_box(aabb box0, aabb box1) {
 
     return aabb(small, big);
 }
-
 #endif

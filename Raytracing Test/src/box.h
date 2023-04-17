@@ -1,6 +1,5 @@
 #ifndef BOX_H
 #define BOX_H
-
 #include "shared.h"
 #include "aarect.h"
 #include "hittable_list.h"
@@ -23,6 +22,7 @@ public:
     hittable_list sides;
 };
 
+
 box::box(const point3& p0, const point3& p1, shared_ptr<material> ptr) {
     box_min = p0;
     box_max = p1;
@@ -40,5 +40,4 @@ box::box(const point3& p0, const point3& p1, shared_ptr<material> ptr) {
 bool box::hit(const ray& r, double t_min, double t_max, hit_record& rec) const {
     return sides.hit(r, t_min, t_max, rec);
 }
-
 #endif

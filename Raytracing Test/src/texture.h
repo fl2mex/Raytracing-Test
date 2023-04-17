@@ -1,5 +1,4 @@
 #define STB_IMAGE_IMPLEMENTATION
-
 #ifndef TEXTURE_H
 #define TEXTURE_H
 
@@ -122,5 +121,4 @@ private:
     int width, height;
     int bytes_per_scanline;
 };
-
 #endif

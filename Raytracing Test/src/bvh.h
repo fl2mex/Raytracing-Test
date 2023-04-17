@@ -1,12 +1,10 @@
 #ifndef BVH_H
 #define BVH_H
-
 #include "shared.h"
 #include "hittable.h"
 #include "hittable_list.h"
 
 #include <algorithm>
-
 
 class bvh_node : public hittable {
 public:
@@ -42,7 +40,6 @@ inline bool box_compare(const shared_ptr<hittable> a, const shared_ptr<hittable>
     return box_a.min().e[axis] < box_b.min().e[axis];
 }
 
-
 bool box_x_compare(const shared_ptr<hittable> a, const shared_ptr<hittable> b) {
     return box_compare(a, b, 0);
 }
@@ -60,7 +57,7 @@ bvh_node::bvh_node(
     const std::vector<shared_ptr<hittable>>& src_objects,
     size_t start, size_t end, double time0, double time1
 ) {
-    auto objects = src_objects; // Create a modifiable array of the source scene objects
+    auto objects = src_objects;
 
     int axis = random_int(0, 2);
     auto comparator = (axis == 0) ? box_x_compare
@@ -116,5 +113,4 @@ bool bvh_node::bounding_box(double time0, double time1, aabb& output_box) const 
     output_box = box;
     return true;
 }
-
 #endif
