@@ -10,7 +10,7 @@ just go ahead and build :^) <br>
 # Outputting a file
 To output a file, you will need to build the file, <br>
 Then open command prompt to path to the file, <br>
-Then run: `.\"Raytracing Test.exe > image.ppm"` <br>
+Then run: `.\"Raytracing Test.exe" > image.ppm` <br>
 Then open the ppm file, my preferred website is [this one.](https://www.cs.rhodes.edu/welshc/COMP141_F16/ppmReader.html)
 
 # Output:
